@@ -1,3 +1,4 @@
+import React from 'react';
 <section class="statistics">
   <h2 class="title">Upload stats</h2>
 

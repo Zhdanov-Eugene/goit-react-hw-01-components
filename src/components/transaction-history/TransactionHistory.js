@@ -1,3 +1,4 @@
+import React from 'react';
 
 <table class="transaction-history">
   <thead>
