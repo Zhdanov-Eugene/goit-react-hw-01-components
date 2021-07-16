@@ -6,7 +6,7 @@ https://github.com/goitacademy/react-homework/tree/master/homework-01
 4.npm run deploy
 5.Published
 :)
-npm run start
+5.1-npm run start
 6.npm run dev
 7.work
 <!-- npm run build -->
