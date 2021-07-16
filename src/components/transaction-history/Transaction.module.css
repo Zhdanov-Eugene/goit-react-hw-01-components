@@ -1,0 +1,23 @@
+.history {
+    padding-top: 20px;
+    width: 500px;
+  }
+  
+  .thead {
+    color: antiquewhite;
+    background-color: cornflowerblue;
+  }
+  
+  th {
+    padding: 20px;
+  }
+  
+  .tbody {
+    background-color: aquamarine;
+  }
+  
+  td {
+    padding: 10px;
+    text-align: center;
+    color: grey;
+  }

@@ -1,28 +1,27 @@
 import React from 'react';
-<section class="statistics">
-  <h2 class="title">Upload stats</h2>
+import PropTypes from 'prop-types';
+import StatsList from './StatsList';
+import styles from './Statistics.module.css';
 
-  <ul class="stat-list">
-    <li class="item">
-      <span class="label">.docx</span>
-      <span class="percentage">4%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
-  </ul>
-</section>
 
-// import statisticalData from '/путь/к/statistical-data.json';
+const Statistics = ({ title, stats }) => {
+    return (
+        <section className={styles.statistics}>
+            {title && (
+                <h2 className={styles.title}>{title}</h2>
+            )}
+            <StatsList data={stats}/>
+        </section>
+)
+}
 
-// <Statistics title="Upload stats" stats={statisticalData} />;
-// <Statistics stats={statisticalData} />;
+Statistics.defaultProps = {
+    title: "Upload stats",
+}
+
+Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.array.isRequired,
+}
+
+export default Statistics;

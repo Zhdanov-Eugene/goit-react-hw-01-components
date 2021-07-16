@@ -1,49 +1,48 @@
 import React from 'react';
 
-<div class="profile">
-  <div class="description">
-    <img
-      src="https://www.flaticon.com/svg/static/icons/svg/3135/3135715.svg"
-      alt="Аватар пользователя"
-      class="avatar"
-    />
-    <p class="name">Petra Marica</p>
-    <p class="tag">@pmarica</p>
-    <p class="location">Salvador, Brasil</p>
-  </div>
+import PropTypes from 'prop-types';
+import styles from './Profile.module.css';
 
-  <ul class="stats">
-    <li>
-      <span class="label">Followers</span>
-      <span class="quantity">1000</span>
-    </li>
-    <li>
-      <span class="label">Views</span>
-      <span class="quantity">2000</span>
-    </li>
-    <li>
-      <span class="label">Likes</span>
-      <span class="quantity">3000</span>
-    </li>
-  </ul>
-</div>
+const Profile = (props) => {
+    return (
+        <div className={styles.profile}>
+            <div className={styles.info}>
+                <img
+                    src={props.url}
+                    alt="Аватар пользователя"
+                    className={styles.avatar}
+                />
+                <p className={styles.name}>{props.name}</p>
+                <p className={styles.tag}>@{props.tag}</p>
+                <p className={styles.location}>{props.location}</p>
+            </div>
 
-// import user from 'путь/к/user.json;
+            <ul className={styles.stats}>
+                <li className={styles.item}>
+                    <span className={styles.label}>Followers</span>
+                    <span className={styles.quantity}> {props.followers}</span>
+                </li>
+                <li className={styles.item}>
+                    <span className={styles.label}> Views</span>
+                    <span className={styles.quantity}> {props.views}</span>
+                </li>
+                <li className={styles.item}>
+                    <span className={styles.label}>Likes</span>
+                    <span className={styles.quantity}>{props.likes}</span>
+                </li>
+            </ul>
+        </div>
+    )
+};
 
-// <Profile
-//   name={user.name}
-//   tag={user.tag}
-//   location={user.location}
-//   avatar={user.avatar}
-//   stats={user.stats}
-// />
+Profile.propTypes = {
+    url: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+};
 
-
-// "name": "Jacques Gluke",
-// "tag": "jgluke",
-// "location": "Ocho Rios, Jamaica",
-// "avatar": "https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg",
-// "stats": {
-//   "followers": 5603,
-//   "views": 4827,
-//   "likes": 1308
+export default Profile;

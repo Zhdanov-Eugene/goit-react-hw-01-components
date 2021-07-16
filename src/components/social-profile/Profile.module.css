@@ -1,0 +1,43 @@
+.profile {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid;
+    border-color: darkcyan;
+    border-radius: 4px;
+    background-color: cornsilk;
+    text-align: center;
+  }
+  
+  .name {
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  .tag {
+    font-size: small;
+  }
+  
+  .location {
+    font-size: small;
+    font-weight: bold;
+  }
+  
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .statItem {
+    display: blok;
+    width: 100px;
+    height: 50px;
+  
+    background-color: whitesmoke;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .avatar {
+    margin-left: auto;
+    margin-right: auto;
+  }
