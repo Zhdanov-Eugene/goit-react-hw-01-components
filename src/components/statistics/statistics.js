@@ -15,9 +15,10 @@ const Statistics = ({ title, stats }) => {
 )
 }
 
+
 Statistics.defaultProps = {
-    title: "Upload stats",
-}
+    title: "",
+  };
 
 Statistics.propTypes = {
     title: PropTypes.string,
