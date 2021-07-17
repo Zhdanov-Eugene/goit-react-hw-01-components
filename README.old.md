@@ -45,6 +45,12 @@
         "source.fixAll.eslint": true
       } -->
 
+# $ npm install modern-normalize
+
+@import 'node_modules/modern-normalize/modern-normalize.css'; или import
+'../node_modules/modern-normalize/modern-normalize.css'; или import
+'modern-normalize/modern-normalize.css'; 0 0 юбь!!!!!!!
+
 # npm run deploy
 
 # Published
